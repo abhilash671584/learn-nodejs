@@ -1,8 +1,10 @@
+//importing global modules http and fs
 const http = require('http');
 const fs = require('fs');
 
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method, req.headers);
+    //logic based on url
     if (req.url === '/') {
         res.setHeader('Content-Type', 'text/html');
         res.write('<html>')
